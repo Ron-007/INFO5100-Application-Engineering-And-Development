@@ -16,15 +16,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="233" max="32767" attributes="0"/>
-              <Component id="lblName" min="-2" pref="116" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="230" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblTitle" min="-2" pref="239" max="-2" attributes="0"/>
-                  <Component id="txtName" min="-2" pref="354" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="lblName" min="-2" pref="116" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="txtName" min="-2" pref="358" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="40" max="32767" attributes="0"/>
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
@@ -71,7 +73,7 @@
                               <Component id="txtIPAdd" alignment="1" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="199" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -79,16 +81,16 @@
                                   <Component id="lblTelNum" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtEmail" alignment="0" min="-2" pref="357" max="-2" attributes="0"/>
-                                  <Component id="txtTelNum" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtEmail" pref="357" max="32767" attributes="0"/>
+                                  <Component id="txtTelNum" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
                               <Component id="lblDob" min="-2" pref="116" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="txtDob" min="-2" pref="357" max="-2" attributes="0"/>
+                              <Component id="txtDob" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -103,9 +105,9 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="lblTitle" min="-2" pref="36" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblName" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblName" min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="txtName" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="518" max="32767" attributes="0"/>
           </Group>

@@ -11,8 +11,10 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Locale;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -348,8 +350,8 @@ public class CreateJPanel extends javax.swing.JPanel {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-        String validationMessage = validateForm();
-        if (validationMessage.length() == 0) {
+        String validateMessage = validateForm();
+        if (validateMessage.length() == 0) {
             profile.setName(txtName.getText());
             profile.setDob(txtDob.getText());
             profile.setGeodata(txtGeoData.getText());
@@ -369,57 +371,66 @@ public class CreateJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Profile Information is saved");
         } else {
             JOptionPane.showMessageDialog(this, String.format("Form contains "
-                    + "invalid values. %s", validationMessage));
+                    + "invalid values. %s", validateMessage));
         }
     }
 
     private String validateForm() {
-        String validationErrorMessage = "";
+        String validateError = "";
 // name validation
-        if (txtName.getText().equals("")&&txtName.getText()!=("'/^[A-Za-z]+([\\ A-Za-z]+)*/';") ) {
-            validationErrorMessage += "Name should not be empty.";
+        if (txtName.getText().equals("")) {
+            validateError += "Name is invalid.";
         }
-        if (txtGeoData.getText().equals("")&&txtGeoData.getText()!=("[A-Za-z0-9'\\.\\-\\s\\,]")) {
-            validationErrorMessage += "\nAddress should not be empty.";
+        if (txtGeoData.getText().equals("")) {
+            validateError += "\nAddress is invalid.";
         }
-        if (txtBankAcc.getText().equals("")) {
-            validationErrorMessage += "\nBank Account No. should not be empty.";
+        if (txtBankAcc.getText().equals("")|| txtBankAcc.getText().length() != 12) {
+            validateError += "\nBank Account number is invalid.";
         }
-        if (txtEmail.getText().equals("")) {
-            validationErrorMessage += "\nEmail should not be empty.";
+        if (txtEmail.getText().equals("")|| !txtEmail.getText().contains("@")) {
+            validateError += "\nEmail is invalid.";
         }
-        if (txtFax.getText().equals("")) {
-            validationErrorMessage += "\nFax No. should not be empty.";
+        if (txtFax.getText().equals("")|| txtFax.getText().length() != 10) {
+            validateError += "\nFax number is invalid.";
         }
         if (txtHealthBenf.getText().equals("")) {
-            validationErrorMessage += "\nHealth Plan Beneficiary No. should not be empty.";
+            validateError += "\nHealth Plan Beneficiary number is invalid.";
         }
         if (txtLicensePlate.getText().equals("")) {
-            validationErrorMessage += "\nVehicle No. should not be empty.";
+            validateError += "\nVehicle number is invalid.";
         }
         if (txtLinkedIn.getText().equals("")) {
-            validationErrorMessage += "\nLinkedIn Id should not be empty.";
+            validateError += "\nLinkedIn Id is invalid.";
         }
         if (txtMedRecord.getText().equals("")) {
-            validationErrorMessage += "\nMedical Record No. should not be empty.";
+            validateError += "\nMedical Record number is invalid.";
         }
         if (txtDeviceIdentifier.getText().equals("")) {
-            validationErrorMessage += "\nDevice No. should not be empty.";
+            validateError += "\nDevice number is invalid.";
         }
         if (txtCertiNum.getText().equals("")) {
-            validationErrorMessage += "\nCertificate/Licence No. should not be empty.";
+            validateError += "\nCertificate/Licence number is invalid.";
         }
-        if (txtSSN.getText().equals("")) {
-            validationErrorMessage += "\nSSN No. should not be empty.";
+        if (txtSSN.getText().equals("")|| txtSSN.getText().length() != 9) {
+            validateError += "\nSSN number is invalid.";
         }
-        if (txtTelNum.getText().equals("")) {
-            validationErrorMessage += "\nMob No. should not be empty.";
+        if (txtTelNum.getText().equals("")|| txtTelNum.getText().length() != 10) {
+            validateError += "\nTelphone number is invalid.";
         }
         if (txtDob.getText().equals("")) {
-            validationErrorMessage += "\nDOB should not be empty.";
+            validateError += "\nDOB is invalid.";
         }
+        try{
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.ENGLISH);
+        LocalDate date = LocalDate.parse(txtDob.getText(), formatter);
+        }catch(DateTimeParseException dtpe){
+        validateError += "\nDOB should be in MM/dd/yyyy format.\n";
+        }
+        if (lblPhoto.getText().equals("")) {
+        validateError += "Profile Pic needs to be uploaded.\n";
+}
         
-        return validationErrorMessage;
+        return validateError;
 
     }//GEN-LAST:event_btnSaveActionPerformed
 
