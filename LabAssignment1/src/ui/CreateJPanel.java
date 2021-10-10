@@ -426,9 +426,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         }catch(DateTimeParseException dtpe){
         validateError += "\nDOB should be in MM/dd/yyyy format.\n";
         }
-        if (lblPhoto.getText().equals("")) {
-        validateError += "Profile Pic needs to be uploaded.\n";
-}
         
         return validateError;
 
