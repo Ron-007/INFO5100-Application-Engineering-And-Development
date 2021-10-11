@@ -12,6 +12,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Car;
+import model.Config;
 
 /**
  *
@@ -74,6 +75,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         checkInvalid = new javax.swing.JCheckBox();
         lastUpdate = new javax.swing.JLabel();
         lastUpdateValue = new javax.swing.JLabel();
+        btnUpload = new javax.swing.JButton();
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -127,7 +129,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(102, 153, 255));
         jLabel6.setText("Location");
 
-        LOCATION.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cambridge", "Qincy", "Waltham", "Plymouth" }));
+        LOCATION.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cambridge", "Quincy", "Waltham", "Plymouth" }));
 
         deleteCarBtn.setBackground(new java.awt.Color(153, 204, 255));
         deleteCarBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -241,6 +243,20 @@ public class CreateJPanel extends javax.swing.JPanel {
         lastUpdate.setForeground(new java.awt.Color(102, 153, 255));
         lastUpdate.setText("Updated Timestamp");
 
+        btnUpload.setBackground(new java.awt.Color(153, 204, 255));
+        btnUpload.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnUpload.setText("Upload");
+        btnUpload.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnUploadMouseClicked(evt);
+            }
+        });
+        btnUpload.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUploadActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -285,7 +301,7 @@ public class CreateJPanel extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(checkInvalid))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(195, Short.MAX_VALUE)
                         .addComponent(lastUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(lastUpdateValue, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -304,7 +320,9 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addComponent(deleteCarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43)
                 .addComponent(clearCarFormBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 259, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnUpload, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -351,15 +369,16 @@ public class CreateJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lastUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lastUpdateValue, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lastUpdate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lastUpdateValue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addCarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editCarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteCarBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clearCarFormBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(clearCarFormBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnUpload, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -621,6 +640,17 @@ public class CreateJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_addCarBtnActionPerformed
 
+    private void btnUploadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnUploadMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUploadMouseClicked
+
+    private void btnUploadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadActionPerformed
+        // TODO add your handling code here:
+        Config fleetConfig = new Config();
+        fleetConfig.uploadData();
+        getAllDataCarDtlsForGrid();
+    }//GEN-LAST:event_btnUploadActionPerformed
+
     public void getAllDataCarDtlsForGrid(){
         try{
             //with array
@@ -655,6 +685,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField MANUFACTURE_YEAR;
     private javax.swing.JTextField MODEL_NO;
     private javax.swing.JButton addCarBtn;
+    private javax.swing.JButton btnUpload;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JCheckBox checkInvalid;

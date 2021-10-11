@@ -49,6 +49,7 @@ public class MainJFrame extends javax.swing.JFrame {
         controlPanel.setMinimumSize(new java.awt.Dimension(300, 610));
         controlPanel.setPreferredSize(new java.awt.Dimension(300, 610));
 
+        btnCreate.setBackground(new java.awt.Color(153, 204, 255));
         btnCreate.setText("Create & Modify");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +57,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnView.setBackground(new java.awt.Color(153, 204, 255));
         btnView.setText("View & Search");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
