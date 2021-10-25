@@ -384,6 +384,8 @@ public class ViewJPanel extends javax.swing.JPanel {
                    result.add(obj);
                 }
             }
+            
+        
 
 
 
