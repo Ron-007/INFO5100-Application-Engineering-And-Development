@@ -68,7 +68,7 @@ public class CreatePatientPanel extends javax.swing.JPanel {
         Weight = new javax.swing.JTextField();
         txtBP = new javax.swing.JTextField();
         txtTemperature = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         txtAddress = new javax.swing.JTextField();
         lblName = new javax.swing.JLabel();
@@ -218,12 +218,12 @@ public class CreatePatientPanel extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setText("ADD");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAdd.setBackground(new java.awt.Color(153, 204, 255));
+        btnAdd.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnAdd.setText("ADD");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAddActionPerformed(evt);
             }
         });
 
@@ -337,7 +337,7 @@ public class CreatePatientPanel extends javax.swing.JPanel {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(293, 293, 293)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -426,7 +426,7 @@ public class CreatePatientPanel extends javax.swing.JPanel {
                     .addComponent(Weight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblWeightVal))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnAdd)
                 .addContainerGap(59, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -439,7 +439,7 @@ public class CreatePatientPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCommunityActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
       if(!validateInput()){
           JOptionPane.showMessageDialog(this,"Enter valid details.");
@@ -498,7 +498,7 @@ public class CreatePatientPanel extends javax.swing.JPanel {
       txtTemperature.setText("");
       txtRespiratoryRate.setText("");
       Weight.setText("");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAddActionPerformed
 
     
     private boolean validateInput(){
@@ -713,7 +713,7 @@ public class CreatePatientPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Weigh;
     private javax.swing.JTextField Weight;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnAdd;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel17;

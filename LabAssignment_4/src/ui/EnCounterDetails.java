@@ -45,7 +45,7 @@ public class EnCounterDetails extends javax.swing.JPanel {
         tblHistory = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         txtPatientID = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnViewHis = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 255, 255));
 
@@ -79,11 +79,11 @@ public class EnCounterDetails extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(51, 102, 255));
         jLabel2.setText("Patient ID:");
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setText("View History");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnViewHis.setBackground(new java.awt.Color(153, 204, 255));
+        btnViewHis.setText("View History");
+        btnViewHis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnViewHisActionPerformed(evt);
             }
         });
 
@@ -107,7 +107,7 @@ public class EnCounterDetails extends javax.swing.JPanel {
                                     .addComponent(jLabel1)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(40, 40, 40)
-                                        .addComponent(jButton1)))))
+                                        .addComponent(btnViewHis)))))
                         .addGap(0, 316, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -121,7 +121,7 @@ public class EnCounterDetails extends javax.swing.JPanel {
                     .addComponent(jLabel2)
                     .addComponent(txtPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
-                .addComponent(jButton1)
+                .addComponent(btnViewHis)
                 .addGap(34, 34, 34)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -150,7 +150,7 @@ public class EnCounterDetails extends javax.swing.JPanel {
         
     }
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnViewHisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHisActionPerformed
         // TODO add your handling code here:
         DefaultTableModel model = (DefaultTableModel)tblHistory.getModel();
       
@@ -190,11 +190,11 @@ public class EnCounterDetails extends javax.swing.JPanel {
 //                
 //            }
 //        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnViewHisActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnViewHis;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

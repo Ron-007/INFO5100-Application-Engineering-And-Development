@@ -43,10 +43,10 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtCommunity = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnBP = new javax.swing.JButton();
+        btnHR = new javax.swing.JButton();
+        btnRR = new javax.swing.JButton();
+        btnTemp = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblViewAbnormality = new javax.swing.JTable();
         lblDisplay = new javax.swing.JLabel();
@@ -61,35 +61,35 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(51, 102, 255));
         jLabel2.setText("Community:");
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setText("Blood Pressure");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBP.setBackground(new java.awt.Color(153, 204, 255));
+        btnBP.setText("Blood Pressure");
+        btnBP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBPActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(153, 204, 255));
-        jButton2.setText("Heart Rate");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnHR.setBackground(new java.awt.Color(153, 204, 255));
+        btnHR.setText("Heart Rate");
+        btnHR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnHRActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(153, 204, 255));
-        jButton3.setText("Respiration Rate");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnRR.setBackground(new java.awt.Color(153, 204, 255));
+        btnRR.setText("Respiration Rate");
+        btnRR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnRRActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(153, 204, 255));
-        jButton4.setText("Temperature");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnTemp.setBackground(new java.awt.Color(153, 204, 255));
+        btnTemp.setText("Temperature");
+        btnTemp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnTempActionPerformed(evt);
             }
         });
 
@@ -113,33 +113,35 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblDisplay)
-                        .addGap(299, 299, 299))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(23, 23, 23)
-                                .addComponent(jLabel2)
-                                .addGap(78, 78, 78)
-                                .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(lblDisplay)
+                                .addGap(299, 299, 299))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jButton1)
-                                        .addGap(64, 64, 64))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(43, 43, 43)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton3)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(321, 321, 321))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
-                        .addContainerGap())))
+                                        .addGap(23, 23, 23)
+                                        .addComponent(jLabel2)
+                                        .addGap(78, 78, 78)
+                                        .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addComponent(btnBP)
+                                                .addGap(64, 64, 64))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnHR, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(43, 43, 43)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnTemp, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnRR)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(321, 321, 321))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,12 +156,12 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
                 .addComponent(lblDisplay)
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton3))
+                    .addComponent(btnBP)
+                    .addComponent(btnRR))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4))
+                    .addComponent(btnHR)
+                    .addComponent(btnTemp))
                 .addGap(93, 93, 93)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -180,7 +182,7 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
                  model.addRow(object); 
     }
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBPActionPerformed
         // TODO add your handling code here:
         
         //BP
@@ -238,9 +240,9 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
             }
             
   
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBPActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnRRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRRActionPerformed
         // TODO add your handling code here:
         
         //Respiratory rate
@@ -298,9 +300,9 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
       }
             }
 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnRRActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnHRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHRActionPerformed
         // TODO add your handling code here:
         
         //Heart Rate
@@ -355,9 +357,9 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
       }
             }
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnHRActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnTempActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTempActionPerformed
         // TODO add your handling code here:
         
         //temp
@@ -415,14 +417,14 @@ public class ViewAbnormalityPanel extends javax.swing.JPanel {
           
             }
             
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnTempActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnBP;
+    private javax.swing.JButton btnHR;
+    private javax.swing.JButton btnRR;
+    private javax.swing.JButton btnTemp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

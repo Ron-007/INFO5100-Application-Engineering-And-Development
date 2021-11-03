@@ -55,7 +55,7 @@ public class AddEncounterHistory extends javax.swing.JPanel {
         txtBP = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         txtTemperature = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnUpdateVital = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtPatientID = new javax.swing.JTextField();
 
@@ -115,11 +115,11 @@ public class AddEncounterHistory extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(153, 204, 255));
-        jButton1.setText("Update");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdateVital.setBackground(new java.awt.Color(153, 204, 255));
+        btnUpdateVital.setText("Update");
+        btnUpdateVital.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnUpdateVitalActionPerformed(evt);
             }
         });
 
@@ -174,7 +174,7 @@ public class AddEncounterHistory extends javax.swing.JPanel {
                 .addGap(244, 244, 244))
             .addGroup(layout.createSequentialGroup()
                 .addGap(294, 294, 294)
-                .addComponent(jButton1)
+                .addComponent(btnUpdateVital)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -206,12 +206,12 @@ public class AddEncounterHistory extends javax.swing.JPanel {
                             .addComponent(txtPatientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))))
                 .addGap(38, 38, 38)
-                .addComponent(jButton1)
+                .addComponent(btnUpdateVital)
                 .addContainerGap(122, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnUpdateVitalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateVitalActionPerformed
         // TODO add your handling code here:
 
         Integer id = Integer.parseInt(txtPatientID.getText());
@@ -248,7 +248,7 @@ JOptionPane.showMessageDialog(this,"New vitals added for the patient.");
       Weight.setText("");
 }  
 }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnUpdateVitalActionPerformed
 
     private void txtRespiratoryRateKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRespiratoryRateKeyReleased
         // TODO add your handling code here:
@@ -279,7 +279,7 @@ JOptionPane.showMessageDialog(this,"New vitals added for the patient.");
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Weigh;
     private javax.swing.JTextField Weight;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnUpdateVital;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
