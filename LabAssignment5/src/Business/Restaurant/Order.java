@@ -19,10 +19,10 @@ public class Order {
     public String DeliveryName;
     public String totalPrice;
     public String status;
-    public ArrayList<Dishes> OrderList;
+    public ArrayList<OrderMenu> OrderList;
     public String deliveryAddress;
 
-    public Order(String orderId, String restaurantName, String CustomerName, String DeliveryName, String totalPrice, String status, ArrayList<Dishes> OrderList, String deliveryAddress) {
+    public Order(String orderId, String restaurantName, String CustomerName, String DeliveryName, String totalPrice, String status, ArrayList<OrderMenu> OrderList, String deliveryAddress) {
         this.orderId = orderId;
         this.restaurantName = restaurantName;
         this.CustomerName = CustomerName;
@@ -81,11 +81,11 @@ public class Order {
         this.status = status;
     }
 
-    public ArrayList<Dishes> getOrderList() {
+    public ArrayList<OrderMenu> getOrderList() {
         return OrderList;
     }
 
-    public void setOrderList(ArrayList<Dishes> OrderList) {
+    public void setOrderList(ArrayList<OrderMenu> OrderList) {
         this.OrderList = OrderList;
     }
 

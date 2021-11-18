@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author raunak
+ * @author ronak
  */
 public class UserAccountDirectory {
     
@@ -48,5 +48,15 @@ public class UserAccountDirectory {
                 return false;
         }
         return true;
+    }
+    
+        public void saveUserAccount(UserAccount userAccount, String name, String username, String password) {
+        userAccount.setName(name);
+        userAccount.setUsername(username);
+        userAccount.setPassword(password);
+    }
+    
+    public void deleteUserAccount(UserAccount userAccount) {
+        userAccountList.remove(userAccount);
     }
 }

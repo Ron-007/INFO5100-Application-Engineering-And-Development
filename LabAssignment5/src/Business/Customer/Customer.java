@@ -5,7 +5,7 @@
  */
 package Business.Customer;
 
-import Business.Restaurant.Dishes;
+import Business.Restaurant.OrderMenu;
 import Business.Restaurant.Order;
 import java.util.ArrayList;
 
@@ -80,7 +80,7 @@ public class Customer {
     }
         
     int id = 1;
-      public void addOrder(String orderId, String restaurantName, String customerName, String delivermanName, String totalPrice, String status, ArrayList<Dishes> dishesList, String deliveryAddress) {
+      public void addOrder(String orderId, String restaurantName, String customerName, String delivermanName, String totalPrice, String status, ArrayList<OrderMenu> dishesList, String deliveryAddress) {
         Order order = new Order(orderId, restaurantName, customerName, delivermanName, totalPrice, status, dishesList, deliveryAddress);
         if(orderList == null) {
             orderList = new ArrayList<Order>();

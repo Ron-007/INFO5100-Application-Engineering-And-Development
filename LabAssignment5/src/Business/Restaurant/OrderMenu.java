@@ -9,24 +9,24 @@ package Business.Restaurant;
  *
  * @author ronak
  */
-public class Dishes {
+public class OrderMenu {
     
-    private String dishName;
+    private String menuName;
     private String dishDescripton;
     private String price;
     
-    public Dishes(String dishName, String dishDescription, String dishPrice) {
-        this.dishName = dishName;
+    public OrderMenu(String menuName, String dishDescription, String dishPrice) {
+        this.menuName = menuName;
         this.dishDescripton = dishDescription;
         this.price = dishPrice;
     }
 
     public String getDishName() {
-        return dishName;
+        return menuName;
     }
 
-    public void setDishName(String dishName) {
-        this.dishName = dishName;
+    public void setDishName(String menuName) {
+        this.menuName = menuName;
     }
 
     public String getDishDescripton() {
@@ -47,7 +47,7 @@ public class Dishes {
 
     @Override
     public String toString() {
-        return dishName;
+        return menuName;
     }
     
 }
