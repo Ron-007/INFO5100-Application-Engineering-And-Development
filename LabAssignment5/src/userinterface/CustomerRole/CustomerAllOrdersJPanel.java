@@ -10,7 +10,6 @@ import Business.Restaurant.Order;
 import Business.Restaurant.Restaurant;
 
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -22,29 +21,37 @@ import userinterface.OrderJPanel;
  *
  * @author raunak
  */
-public class CustomerAreaJPanel extends javax.swing.JPanel {
+public class CustomerAllOrdersJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
     private EcoSystem ecosystem;
     private UserAccount userAccount;
+
     /**
      * Creates new form DoctorWorkAreaJPanel
      */
-    public CustomerAreaJPanel(JPanel userProcessContainer, UserAccount account) {
+    public CustomerAllOrdersJPanel(JPanel userProcessContainer, UserAccount account, EcoSystem ecosystem) {
         initComponents();
-        
+
         this.userProcessContainer = userProcessContainer;
-      
+        this.ecosystem = ecosystem;
         this.userAccount = account;
         //valueLabel.setText(enterprise.getName());
-        populateRequestTable();
-    }
-    
-    public void populateRequestTable(){
-        
+        populateRestaurantInfoTable();
     }
 
-    
+    public void populateRestaurantInfoTable() {
+        DefaultTableModel restaurantModel = (DefaultTableModel) tblRestaurants.getModel();
+        restaurantModel.setRowCount(0);
+        for (Restaurant restaurant : ecosystem.getRestaurantDirectory().getRestaurantList()) {
+            Object[] row = new Object[3];
+            row[0] = restaurant;
+            row[1] = restaurant.getRestaurantAddress();
+            row[2] = restaurant.getRestaurantNumber();
+            restaurantModel.addRow(row);
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -59,12 +66,11 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         btnPlaceOrder = new javax.swing.JButton();
         refreshTestJButton = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
-        lblName = new javax.swing.JLabel();
         lblCustomerOrders = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblPreviousOrders = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 153, 51));
+        setBackground(new java.awt.Color(255, 174, 65));
 
         tblRestaurants.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,10 +117,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         });
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        enterpriseLabel.setText("Hello, Welcome");
-
-        lblName.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        lblName.setText("<value>");
+        enterpriseLabel.setText("Restaurant Details");
 
         lblCustomerOrders.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblCustomerOrders.setText("Customer Previous Orders");
@@ -152,36 +155,31 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane2))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(204, 204, 204)
-                        .addComponent(enterpriseLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addGap(350, 350, 350)
                         .addComponent(refreshTestJButton)
                         .addGap(136, 136, 136)
                         .addComponent(btnPlaceOrder))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(227, 227, 227)
-                        .addComponent(lblCustomerOrders)))
-                .addGap(109, 207, Short.MAX_VALUE))
+                        .addGap(400, 400, 400)
+                        .addComponent(lblCustomerOrders))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(414, 414, 414)
+                        .addComponent(enterpriseLabel)))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
+                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -203,8 +201,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             userProcessContainer.add("ManageOrders", manageOrdersJPanel);
             CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
             cardLayout.next(userProcessContainer);
-        }
-        else {
+        } else {
             JOptionPane.showMessageDialog(null, "Please select a row to Place the Order.");
         }
     }//GEN-LAST:event_btnPlaceOrderActionPerformed
@@ -214,7 +211,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         ArrayList<Restaurant> restoDirectory = ecosystem.getRestaurantDirectory().getRestaurantList();
         DefaultTableModel previousOrderModel = (DefaultTableModel) tblPreviousOrders.getModel();
         previousOrderModel.setRowCount(0);
-        for(Order order: customer.getOrderList()) {
+        for (Order order : customer.getOrderList()) {
             Object[] row = new Object[4];
             row[0] = order;
             row[1] = order.getRestaurantName();
@@ -230,7 +227,6 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblCustomerOrders;
-    private javax.swing.JLabel lblName;
     private javax.swing.JButton refreshTestJButton;
     private javax.swing.JTable tblPreviousOrders;
     private javax.swing.JTable tblRestaurants;

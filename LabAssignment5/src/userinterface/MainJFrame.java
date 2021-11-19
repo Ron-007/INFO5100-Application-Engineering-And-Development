@@ -120,7 +120,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
-        container.setBackground(new java.awt.Color(255, 153, 51));
+        container.setBackground(new java.awt.Color(255, 174, 65));
         container.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(container);
 
