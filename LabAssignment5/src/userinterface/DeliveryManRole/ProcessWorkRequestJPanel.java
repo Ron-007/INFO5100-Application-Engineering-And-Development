@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author raunak
+ * @author ronak
  */
 
 
@@ -51,9 +51,11 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
-        lblDeliveryStatus.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblDeliveryStatus.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDeliveryStatus.setForeground(new java.awt.Color(102, 51, 255));
         lblDeliveryStatus.setText("Update Delivery Status");
 
+        btnStatusUpdated.setBackground(new java.awt.Color(153, 153, 255));
         btnStatusUpdated.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnStatusUpdated.setText("Update");
         btnStatusUpdated.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +69,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
 
         txtStatus.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 
+        backJButton.setBackground(new java.awt.Color(153, 153, 255));
         backJButton.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -83,17 +86,15 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(backJButton)
                 .addGap(265, 265, 265)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblStatus)
-                        .addGap(29, 29, 29)
-                        .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblDeliveryStatus))
-                .addGap(0, 295, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnStatusUpdated)
-                .addGap(321, 321, 321))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnStatusUpdated)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblStatus)
+                            .addGap(29, 29, 29)
+                            .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblDeliveryStatus)))
+                .addGap(0, 280, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,9 +107,9 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblStatus)
                     .addComponent(txtStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(31, 31, 31)
                 .addComponent(btnStatusUpdated)
-                .addContainerGap(418, Short.MAX_VALUE))
+                .addContainerGap(414, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

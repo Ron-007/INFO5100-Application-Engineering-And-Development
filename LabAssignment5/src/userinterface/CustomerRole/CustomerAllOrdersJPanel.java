@@ -19,7 +19,7 @@ import userinterface.OrderJPanel;
 
 /**
  *
- * @author raunak
+ * @author ronak
  */
 public class CustomerAllOrdersJPanel extends javax.swing.JPanel {
 
@@ -72,6 +72,7 @@ public class CustomerAllOrdersJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
+        tblRestaurants.setForeground(new java.awt.Color(153, 153, 255));
         tblRestaurants.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -100,6 +101,7 @@ public class CustomerAllOrdersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblRestaurants);
 
+        btnPlaceOrder.setBackground(new java.awt.Color(153, 153, 255));
         btnPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnPlaceOrder.setText("Place Order");
         btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -108,6 +110,7 @@ public class CustomerAllOrdersJPanel extends javax.swing.JPanel {
             }
         });
 
+        refreshTestJButton.setBackground(new java.awt.Color(153, 153, 255));
         refreshTestJButton.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         refreshTestJButton.setText("Refresh");
         refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -116,12 +119,15 @@ public class CustomerAllOrdersJPanel extends javax.swing.JPanel {
             }
         });
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        enterpriseLabel.setForeground(new java.awt.Color(102, 51, 255));
         enterpriseLabel.setText("Restaurant Details");
 
-        lblCustomerOrders.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblCustomerOrders.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblCustomerOrders.setForeground(new java.awt.Color(102, 51, 255));
         lblCustomerOrders.setText("Customer Previous Orders");
 
+        tblPreviousOrders.setForeground(new java.awt.Color(153, 153, 255));
         tblPreviousOrders.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},

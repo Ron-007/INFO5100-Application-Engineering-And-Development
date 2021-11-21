@@ -63,6 +63,7 @@ public class ManageRestaurantInfoJPanel extends javax.swing.JPanel {
         lblRestaurantAddress.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblRestaurantAddress.setText("Address:");
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +76,8 @@ public class ManageRestaurantInfoJPanel extends javax.swing.JPanel {
         lblRestaurantNumber.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblRestaurantNumber.setText("Phone Number:");
 
-        lblManageRestaurantInfo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblManageRestaurantInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblManageRestaurantInfo.setForeground(new java.awt.Color(102, 51, 255));
         lblManageRestaurantInfo.setText("Manage Restaurant Information");
 
         lblRestaurantName.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -95,6 +97,7 @@ public class ManageRestaurantInfoJPanel extends javax.swing.JPanel {
         lblRestaurantUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblRestaurantUsername.setText("Restaurant Username:");
 
+        btnSave.setBackground(new java.awt.Color(153, 153, 255));
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -103,6 +106,7 @@ public class ManageRestaurantInfoJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnUpdate.setBackground(new java.awt.Color(153, 153, 255));
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {

@@ -54,6 +54,7 @@ public class DeliverymanAssignmentJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -62,6 +63,7 @@ public class DeliverymanAssignmentJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnOrderAssignment.setBackground(new java.awt.Color(153, 153, 255));
         btnOrderAssignment.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnOrderAssignment.setText("Assign Order");
         btnOrderAssignment.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +90,8 @@ public class DeliverymanAssignmentJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblAssignDeliveryman);
 
-        lblDeliverymanAssignment.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblDeliverymanAssignment.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDeliverymanAssignment.setForeground(new java.awt.Color(102, 51, 255));
         lblDeliverymanAssignment.setText("Assigning Deliveryman Orders");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -123,7 +126,7 @@ public class DeliverymanAssignmentJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnOrderAssignment)
-                .addContainerGap(363, Short.MAX_VALUE))
+                .addContainerGap(359, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

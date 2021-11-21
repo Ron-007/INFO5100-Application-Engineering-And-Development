@@ -18,17 +18,17 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author ronak
  */
-public class ManageRestoOrdersJPanel extends javax.swing.JPanel {
+public class ManageResOrdersJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageRestoOrdersJPanel
+     * Creates new form ManageResOrdersJPanel
      */
     
     private JPanel userProcessContainer;
     private UserAccount userAccount;
     private EcoSystem ecosystem;
     
-    public ManageRestoOrdersJPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem) {
+    public ManageResOrdersJPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecosystem) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
@@ -57,9 +57,11 @@ public class ManageRestoOrdersJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
-        lblRestoOrdersInfo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblRestoOrdersInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblRestoOrdersInfo.setForeground(new java.awt.Color(102, 51, 255));
         lblRestoOrdersInfo.setText("Manage Customers Orders");
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +70,7 @@ public class ManageRestoOrdersJPanel extends javax.swing.JPanel {
             }
         });
 
+        tblOrderDetails.setForeground(new java.awt.Color(153, 153, 255));
         tblOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -86,6 +89,7 @@ public class ManageRestoOrdersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblOrderDetails);
 
+        btnRefresh.setBackground(new java.awt.Color(153, 153, 255));
         btnRefresh.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +98,7 @@ public class ManageRestoOrdersJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnViewOrder.setBackground(new java.awt.Color(153, 153, 255));
         btnViewOrder.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnViewOrder.setText("View Order");
         btnViewOrder.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +107,7 @@ public class ManageRestoOrdersJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAssignDeliveryMan.setBackground(new java.awt.Color(153, 153, 255));
         btnAssignDeliveryMan.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnAssignDeliveryMan.setText("Assign Delivery Man");
         btnAssignDeliveryMan.addActionListener(new java.awt.event.ActionListener() {

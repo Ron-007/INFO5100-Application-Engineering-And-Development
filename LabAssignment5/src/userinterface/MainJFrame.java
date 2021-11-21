@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Lingfeng
+ * @author ronak
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -57,6 +57,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        loginJButton.setBackground(new java.awt.Color(153, 153, 255));
         loginJButton.setText("Login");
         loginJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,12 +65,15 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 51, 255));
         jLabel1.setText("User Name");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 51, 255));
         jLabel2.setText("Password");
 
+        logoutJButton.setBackground(new java.awt.Color(153, 153, 255));
         logoutJButton.setText("Logout");
         logoutJButton.setEnabled(false);
         logoutJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +119,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(logoutJButton)
                 .addGap(8, 8, 8)
                 .addComponent(loginJLabel)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(189, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);

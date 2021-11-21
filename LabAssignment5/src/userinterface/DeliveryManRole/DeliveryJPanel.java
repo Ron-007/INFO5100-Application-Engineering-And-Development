@@ -70,6 +70,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 174, 65));
 
+        btnSave.setBackground(new java.awt.Color(153, 153, 255));
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +81,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
 
         txtDeliverymanPassword.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 
+        btnCreateDeliveryman.setBackground(new java.awt.Color(153, 153, 255));
         btnCreateDeliveryman.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnCreateDeliveryman.setText("Register");
         btnCreateDeliveryman.addActionListener(new java.awt.event.ActionListener() {
@@ -88,9 +90,11 @@ public class DeliveryJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblDeliverymanInfo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblDeliverymanInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblDeliverymanInfo.setForeground(new java.awt.Color(102, 51, 255));
         lblDeliverymanInfo.setText("Deliveryman Information");
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -100,6 +104,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
         });
 
         tblDeliveryman.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        tblDeliveryman.setForeground(new java.awt.Color(153, 153, 255));
         tblDeliveryman.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -122,6 +127,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
         lblDeliverymanName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblDeliverymanName.setText("Name:");
 
+        btnUpdate.setBackground(new java.awt.Color(153, 153, 255));
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +146,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
 
         txtDeliverymanName.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 
+        btnDelete.setBackground(new java.awt.Color(153, 153, 255));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -162,7 +169,8 @@ public class DeliveryJPanel extends javax.swing.JPanel {
 
         txtDeliverymanNumber.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 
-        lblManageDeliverymanInfo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblManageDeliverymanInfo1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblManageDeliverymanInfo1.setForeground(new java.awt.Color(102, 51, 255));
         lblManageDeliverymanInfo1.setText("Create Deliveryman");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -260,7 +268,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
                     .addComponent(btnUpdate)
                     .addComponent(btnDelete)
                     .addComponent(btnSave))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -308,7 +316,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
             return;
         }
         if(txtDeliverymanAddress.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Adress cannot be empty.");
+            JOptionPane.showMessageDialog(this, "Address cannot be empty.");
             return;
         }
         else if(txtDeliverymanNumber.getText().isEmpty()){
@@ -348,7 +356,7 @@ public class DeliveryJPanel extends javax.swing.JPanel {
             return;
         }
         if(txtDeliverymanAddress.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Adress cannot be empty.");
+            JOptionPane.showMessageDialog(this, "Address cannot be empty.");
             return;
         }
         else if(txtDeliverymanNumber.getText().isEmpty()){

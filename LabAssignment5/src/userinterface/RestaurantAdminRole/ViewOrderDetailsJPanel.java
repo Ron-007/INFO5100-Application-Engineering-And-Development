@@ -59,6 +59,7 @@ public class ViewOrderDetailsJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 153, 51));
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +76,7 @@ public class ViewOrderDetailsJPanel extends javax.swing.JPanel {
         txtOrderId.setBackground(new java.awt.Color(255, 153, 51));
         txtOrderId.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 
+        btnStatus.setBackground(new java.awt.Color(153, 153, 255));
         btnStatus.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnStatus.setText("Update");
         btnStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +87,7 @@ public class ViewOrderDetailsJPanel extends javax.swing.JPanel {
 
         jScrollPane1.setBackground(new java.awt.Color(255, 153, 51));
 
+        tblViewOrderDetails.setForeground(new java.awt.Color(153, 153, 255));
         tblViewOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -103,7 +106,8 @@ public class ViewOrderDetailsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblViewOrderDetails);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 51, 255));
         jLabel1.setText("Update Order Status");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -146,7 +150,7 @@ public class ViewOrderDetailsJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnStatus)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addContainerGap(285, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

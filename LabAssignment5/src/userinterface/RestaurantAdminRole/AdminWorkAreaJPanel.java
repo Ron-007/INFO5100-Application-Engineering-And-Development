@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author  raunak
+ * @author  ronak
  */
 public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     
@@ -47,10 +47,12 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 174, 65));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 51, 255));
         jLabel1.setText("Restaurant Adminstrative ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 210, 40));
 
+        userJButton.setBackground(new java.awt.Color(153, 153, 255));
         userJButton.setText("Manage Restaurant Info");
         userJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +61,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 170, -1));
 
+        manageEmployeeJButton.setBackground(new java.awt.Color(153, 153, 255));
         manageEmployeeJButton.setText("Manage menu");
         manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +70,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 170, -1));
 
+        manageOrganizationJButton.setBackground(new java.awt.Color(153, 153, 255));
         manageOrganizationJButton.setText("Manage Orders");
         manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +101,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
 
-        ManageRestoOrdersJPanel manageRestoOrdersJPanel = new ManageRestoOrdersJPanel(userProcessContainer, userAccount, ecosystem);
+        ManageResOrdersJPanel manageRestoOrdersJPanel = new ManageResOrdersJPanel(userProcessContainer, userAccount, ecosystem);
         userProcessContainer.add("ManageOrders", manageRestoOrdersJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);

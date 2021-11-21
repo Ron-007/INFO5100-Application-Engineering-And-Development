@@ -18,7 +18,7 @@ import userinterface.DeliveryManRole.DeliveryJPanel;
 
 /**
  *
- * @author MyPC1
+ * @author ronak
  */
 public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -31,7 +31,34 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
+        populateTree();
     }
+    
+    public void populateTree() {
+        DefaultMutableTreeNode assets = new DefaultMutableTreeNode("roles");
+        DefaultMutableTreeNode restaurant = new DefaultMutableTreeNode("restaurants");
+        DefaultMutableTreeNode customers = new DefaultMutableTreeNode("customers");
+        DefaultMutableTreeNode deliverymen = new DefaultMutableTreeNode("deliverymen");
+        assets.add(restaurant);
+        assets.add(customers);
+        assets.add(deliverymen);
+        for (int i = 0; i < this.ecosystem.getRestaurantDirectory().getRestaurantList().size(); i++) {
+        DefaultMutableTreeNode temp = new DefaultMutableTreeNode(this.ecosystem.getRestaurantDirectory().getRestaurantList().get(i).getRestaurantName());
+        restaurant.add(temp);
+        }
+        for (int i = 0; i < this.ecosystem.getUserAccountDirectory().getUserAccountList().size(); i++) {
+        if (this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getRole().toString() == "Business.Role.DeliverManRole") {
+        DefaultMutableTreeNode temp = new DefaultMutableTreeNode(this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getUsername());
+        deliverymen.add(temp);
+        } else if (this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getRole().toString() == "Business.Role.CustomerRole") {
+        DefaultMutableTreeNode temp = new DefaultMutableTreeNode(this.ecosystem.getUserAccountDirectory().getUserAccountList().get(i).getUsername());
+        customers.add(temp);
+        }
+        }
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(assets));
+    }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,33 +72,97 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageEnterprise = new javax.swing.JButton();
         btnManageNetwork = new javax.swing.JButton();
         btnManageAdmin = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTree1 = new javax.swing.JTree();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 174, 65));
         setAutoscrolls(true);
 
+        btnManageEnterprise.setBackground(new java.awt.Color(153, 153, 255));
         btnManageEnterprise.setText("Manage Restaurants");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageEnterpriseActionPerformed(evt);
             }
         });
-        add(btnManageEnterprise);
 
+        btnManageNetwork.setBackground(new java.awt.Color(153, 153, 255));
         btnManageNetwork.setText("Manage All Customers");
         btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageNetworkActionPerformed(evt);
             }
         });
-        add(btnManageNetwork);
 
+        btnManageAdmin.setBackground(new java.awt.Color(153, 153, 255));
         btnManageAdmin.setText("Manage Deliveryman");
         btnManageAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageAdminActionPerformed(evt);
             }
         });
-        add(btnManageAdmin);
+
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("JTree");
+        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("restaurant");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("customer");
+        treeNode1.add(treeNode2);
+        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("delivery");
+        treeNode1.add(treeNode2);
+        jTree1.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(jTree1);
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 51, 255));
+        jLabel2.setText("FOOD MANAGEMENT SYSTEM");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\ronak\\OneDrive\\Desktop\\food-delivery-roles.jpg")); // NOI18N
+        jLabel3.setText("jLabel3");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(243, 243, 243)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnManageEnterprise)
+                                    .addComponent(btnManageAdmin))
+                                .addGap(10, 10, 10))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnManageNetwork)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(124, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnManageEnterprise)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnManageAdmin))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnManageNetwork))))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAdminActionPerformed
@@ -103,5 +194,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageAdmin;
     private javax.swing.JButton btnManageEnterprise;
     private javax.swing.JButton btnManageNetwork;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 }

@@ -67,7 +67,8 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
-        lblManageRestaurantInfo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblManageRestaurantInfo1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblManageRestaurantInfo1.setForeground(new java.awt.Color(102, 51, 255));
         lblManageRestaurantInfo1.setText("Create Restaurant ");
 
         lblRestaurantPassword.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -80,6 +81,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
 
         txtRestaurantPassword.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
 
+        btnCreateRestaurant.setBackground(new java.awt.Color(153, 153, 255));
         btnCreateRestaurant.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnCreateRestaurant.setText("Register ");
         btnCreateRestaurant.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +90,8 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblRestaurantInfo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblRestaurantInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblRestaurantInfo.setForeground(new java.awt.Color(102, 51, 255));
         lblRestaurantInfo.setText("Restaurant Details");
 
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
@@ -100,6 +103,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
         });
 
         tblRestaurants.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        tblRestaurants.setForeground(new java.awt.Color(153, 153, 255));
         tblRestaurants.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -122,6 +126,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
         lblRestaurantName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblRestaurantName.setText("Name:");
 
+        btnUpdateRestaurant.setBackground(new java.awt.Color(153, 153, 255));
         btnUpdateRestaurant.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnUpdateRestaurant.setText("Update");
         btnUpdateRestaurant.addActionListener(new java.awt.event.ActionListener() {
@@ -134,6 +139,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
         lblRestaurantUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblRestaurantUsername.setText("Username:");
 
+        btnDeleteRestaurant.setBackground(new java.awt.Color(153, 153, 255));
         btnDeleteRestaurant.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnDeleteRestaurant.setText("Delete");
         btnDeleteRestaurant.addActionListener(new java.awt.event.ActionListener() {
@@ -142,6 +148,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnSave.setBackground(new java.awt.Color(153, 153, 255));
         btnSave.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -256,7 +263,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
                     .addComponent(btnUpdateRestaurant)
                     .addComponent(btnDeleteRestaurant)
                     .addComponent(btnSave))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -275,7 +282,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
             return;
         }
         if (txtRestaurantAddress.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Adress cannot be empty.");
+            JOptionPane.showMessageDialog(this, "Address cannot be empty.");
             return;
         } else if (txtRestaurantNumber.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Phone number cannot be empty.");
@@ -370,7 +377,7 @@ public class ManageRestaurantsJPanel extends javax.swing.JPanel {
             return;
         }
         if (txtRestaurantAddress.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Adress cannot be empty.");
+            JOptionPane.showMessageDialog(this, "Address cannot be empty.");
             return;
         } else if (txtRestaurantNumber.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Phone number cannot be empty.");

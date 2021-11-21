@@ -63,10 +63,12 @@ public class MenuJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
-        lblMenuInfo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblMenuInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblMenuInfo.setForeground(new java.awt.Color(102, 51, 255));
         lblMenuInfo.setText("Menu Information");
 
         tblMenus.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        tblMenus.setForeground(new java.awt.Color(153, 153, 255));
         tblMenus.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -85,9 +87,11 @@ public class MenuJPanel extends javax.swing.JPanel {
         });
         scrollCustomerInfo.setViewportView(tblMenus);
 
-        lblManageMenuInfo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblManageMenuInfo.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblManageMenuInfo.setForeground(new java.awt.Color(102, 51, 255));
         lblManageMenuInfo.setText("Add Menu");
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +103,7 @@ public class MenuJPanel extends javax.swing.JPanel {
         lblDishName.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblDishName.setText("Name:");
 
+        btnDelete.setBackground(new java.awt.Color(153, 153, 255));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +118,7 @@ public class MenuJPanel extends javax.swing.JPanel {
         lblDishPrice.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblDishPrice.setText("Price:");
 
+        btnCreateMenu.setBackground(new java.awt.Color(153, 153, 255));
         btnCreateMenu.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnCreateMenu.setText("Add");
         btnCreateMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +198,7 @@ public class MenuJPanel extends javax.swing.JPanel {
                 .addComponent(scrollCustomerInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnDelete)
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

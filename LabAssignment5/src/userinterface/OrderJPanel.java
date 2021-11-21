@@ -72,6 +72,7 @@ public class OrderJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 174, 65));
 
+        btnBack.setBackground(new java.awt.Color(153, 153, 255));
         btnBack.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -80,6 +81,7 @@ public class OrderJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPlaceOrder1.setBackground(new java.awt.Color(153, 153, 255));
         btnPlaceOrder1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnPlaceOrder1.setText("Place Order");
         btnPlaceOrder1.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +90,7 @@ public class OrderJPanel extends javax.swing.JPanel {
             }
         });
 
+        tblCustMenu.setForeground(new java.awt.Color(153, 153, 255));
         tblCustMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -124,9 +127,11 @@ public class OrderJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblCart.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        lblCart.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblCart.setForeground(new java.awt.Color(102, 51, 255));
         lblCart.setText("Cart");
 
+        tblCart.setForeground(new java.awt.Color(153, 153, 255));
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -155,9 +160,11 @@ public class OrderJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(tblCart);
 
-        lblPlaceOrder1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblPlaceOrder1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblPlaceOrder1.setForeground(new java.awt.Color(102, 51, 255));
         lblPlaceOrder1.setText("Place Order");
 
+        btnDelete.setBackground(new java.awt.Color(153, 153, 255));
         btnDelete.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +176,8 @@ public class OrderJPanel extends javax.swing.JPanel {
         lblTotalPrice.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         lblTotalPrice.setText("Total Price($):");
 
-        lblMenu.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblMenu.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblMenu.setForeground(new java.awt.Color(102, 51, 255));
         lblMenu.setText("Menu");
 
         txtTotalPrice.setEditable(false);
@@ -228,10 +236,10 @@ public class OrderJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAddToCart)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addComponent(lblCart, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDelete)

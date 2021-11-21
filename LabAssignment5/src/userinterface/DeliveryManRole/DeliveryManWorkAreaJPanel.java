@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author raunak
+ * @author ronak
  */
 public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -76,6 +76,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 174, 65));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblDeliveryInfo.setForeground(new java.awt.Color(153, 153, 255));
         tblDeliveryInfo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -106,6 +107,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 700, 190));
 
+        processJButton1.setBackground(new java.awt.Color(153, 153, 255));
         processJButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         processJButton1.setText("Process Order");
         processJButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +117,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(processJButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
+        refreshJButton1.setBackground(new java.awt.Color(153, 153, 255));
         refreshJButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         refreshJButton1.setText("Refresh");
         refreshJButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +127,8 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(refreshJButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 250, -1, -1));
 
-        lblManageDelivery.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        lblManageDelivery.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lblManageDelivery.setForeground(new java.awt.Color(102, 51, 255));
         lblManageDelivery.setText("Manage Delivery");
         add(lblManageDelivery, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
